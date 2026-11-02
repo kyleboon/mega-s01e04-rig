@@ -27,6 +27,7 @@ export type Night = {
   night: string;
   rows: DigestRow[]; // sorted by job
   badLines: number; // lines that didn't parse: counted, never thrown
+  counts: Record<RunStatus, number>; // parsed lines per status, for the board (§ 2c)
 };
 
 // null when there is no file for that night (the routes answer 404).
